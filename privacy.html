@@ -1,208 +1,273 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!doctype html>
+<html lang="tr" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CarSpy Privacy Policy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090b18">
+  <title>CarSpy — Privacy Policy</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 24px;
-      line-height: 1.7;
-      background: #0f172a;
-      color: #e5e7eb;
-    }
-    h1, h2, h3 {
-      color: #60a5fa;
-    }
-    a {
-      color: #93c5fd;
-    }
-    .muted {
-      color: #cbd5e1;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #334155;
-      margin: 32px 0;
-    }
+    :root{--bg:#070914;--card:#101326;--card2:#15192f;--text:#f5f7ff;--muted:#aeb5cc;--line:#292e4c;--purple:#8b5cf6;--cyan:#22d3ee;--orange:#f59e0b;--shadow:0 24px 80px rgba(0,0,0,.45)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% -10%,rgba(139,92,246,.22),transparent 35%),radial-gradient(circle at 100% 15%,rgba(34,211,238,.13),transparent 30%),var(--bg);color:var(--text);font:16px/1.72 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,#000,transparent 80%)}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(7,9,20,.78);border-bottom:1px solid rgba(255,255,255,.07);backdrop-filter:blur(18px)}
+    .topbar-inner{max-width:1040px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.3px}.mark{width:38px;height:38px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,var(--purple),#4338ca 48%,var(--cyan));box-shadow:0 0 30px rgba(139,92,246,.32);font-size:20px}.brand small{display:block;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}
+    .language{position:relative}.language button{min-width:168px;border:1px solid var(--line);border-radius:13px;background:var(--card2);color:var(--text);padding:10px 13px;display:flex;align-items:center;justify-content:space-between;gap:12px;font:inherit;font-weight:750;cursor:pointer}.language button:hover,.language button[aria-expanded="true"]{border-color:var(--orange);box-shadow:0 0 0 3px rgba(245,158,11,.1)}
+    .menu{position:absolute;right:0;top:calc(100% + 9px);width:300px;max-height:430px;overflow:auto;padding:9px;background:rgba(16,19,38,.98);border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow);display:none}.menu.open{display:grid;grid-template-columns:1fr 1fr;gap:7px}.menu button{min-width:0;padding:9px 10px;border-radius:10px;justify-content:flex-start;background:#181b30;font-size:13px}.menu button.active{border-color:var(--orange);color:#ffc247;background:rgba(245,158,11,.09)}
+    main{max-width:960px;margin:0 auto;padding:54px 22px 80px}.hero{position:relative;overflow:hidden;padding:42px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(139,92,246,.14),rgba(16,19,38,.94) 42%,rgba(34,211,238,.07));box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;width:230px;height:230px;border-radius:50%;right:-100px;top:-120px;background:var(--cyan);filter:blur(90px);opacity:.18}.eyebrow{color:#fbbf24;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1.8px}.hero h1{font-size:clamp(32px,6vw,54px);line-height:1.05;margin:10px 0 14px;background:linear-gradient(90deg,#fff,#c4b5fd 55%,#67e8f9);-webkit-background-clip:text;color:transparent}.updated{color:var(--muted);margin:0}.intro{font-size:18px;color:#d9def0;max-width:760px;margin:25px 0 0}
+    .notice{margin:22px 0 0;padding:16px 18px;border:1px solid rgba(34,211,238,.25);border-radius:15px;background:rgba(34,211,238,.06);color:#d9fbff}.notice strong{color:#67e8f9}
+    .policy{margin-top:28px;display:grid;gap:16px}.section{padding:26px 28px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,rgba(21,25,47,.94),rgba(12,15,31,.94));box-shadow:0 12px 35px rgba(0,0,0,.16)}.section h2{font-size:20px;margin:0 0 12px;color:#fff;display:flex;align-items:center;gap:10px}.section h2 span{width:29px;height:29px;display:grid;place-items:center;border-radius:9px;background:rgba(139,92,246,.18);color:#c4b5fd;font-size:13px}.section p{margin:9px 0;color:#cbd1e3}.section ul{margin:10px 0 0;padding-inline-start:22px;color:#cbd1e3}.section li{margin:6px 0}.section li::marker{color:var(--cyan)}a{color:#67e8f9;text-decoration:none}a:hover{text-decoration:underline}.links{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}.pill{display:inline-flex;padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:#0c1023;font-size:13px}
+    footer{text-align:center;color:#838ba7;padding:28px 0 0;font-size:13px}.hidden{display:none!important}
+    [dir="rtl"] .menu{right:auto;left:0}[dir="rtl"] .menu button{text-align:right}
+    @media(max-width:640px){.topbar-inner{padding:10px 14px}.brand small{display:none}.language button{min-width:142px}.menu{position:fixed;left:12px!important;right:12px!important;top:69px;width:auto}.hero{padding:29px 22px;border-radius:22px}main{padding:30px 14px 60px}.section{padding:21px 19px}.intro{font-size:16px}}
   </style>
 </head>
 <body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand"><div class="mark">🏎️</div><div>CarSpy<small>Car Recognition Game</small></div></div>
+      <div class="language">
+        <button id="languageButton" type="button" aria-expanded="false"><span id="currentLanguage">🇹🇷 Türkçe</span><span>⌄</span></button>
+        <div id="languageMenu" class="menu" role="menu"></div>
+      </div>
+    </div>
+  </header>
 
-  <h1>CarSpy Gizlilik Politikası</h1>
-  <p class="muted"><strong>Son güncelleme:</strong> 21 Nisan 2026</p>
+  <main>
+    <section class="hero">
+      <div class="eyebrow" data-i18n="eyebrow"></div>
+      <h1 data-i18n="title"></h1>
+      <p class="updated"><strong data-i18n="updatedLabel"></strong> <span data-i18n="updatedDate"></span></p>
+      <p class="intro" data-i18n="intro"></p>
+      <div class="notice" data-i18n-html="summary"></div>
+    </section>
+    <div id="policy" class="policy"></div>
+    <footer>© 2026 CarSpy · <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a></footer>
+  </main>
 
-  <p>
-    Bu Gizlilik Politikası, CarSpy mobil uygulamasının kullanıcı verilerini nasıl işlediğini açıklar.
-    CarSpy, araç tanıma oyunu deneyimi sunmak amacıyla tasarlanmıştır. Uygulama, kullanıcıdan doğrudan
-    ad, soyad, telefon numarası veya açık adres gibi bilgiler talep etmez.
-  </p>
+  <script>
+    const languages = [
+      ['tr','🇹🇷','Türkçe'],['en','🇬🇧','English'],['de','🇩🇪','Deutsch'],['it','🇮🇹','Italiano'],['es','🇪🇸','Español'],
+      ['fr','🇫🇷','Français'],['ru','🇷🇺','Русский'],['pt-BR','🇧🇷','Português (Brasil)'],['ja','🇯🇵','日本語'],['ko','🇰🇷','한국어'],
+      ['ar','🇸🇦','العربية'],['nl','🇳🇱','Nederlands'],['nb','🇳🇴','Norsk bokmål'],['fil','🇵🇭','Filipino'],['hi','🇮🇳','हिन्दी']
+    ];
 
-  <h2>1. Toplanan Veriler</h2>
-  <p>CarSpy aşağıdaki veri türlerini işleyebilir:</p>
-  <ul>
-    <li>Leaderboard veya profil sistemi için kullanılan kullanıcı adı</li>
-    <li>Oyun içi skorlar, başarımlar, sıralama verileri ve istatistikler</li>
-    <li>Uygulamanın çalışması için gerekli temel teknik veriler</li>
-    <li>Çökme kayıtları, performans verileri ve hata ayıklama bilgileri</li>
-    <li>Ödüllü reklam gösterimi ve reklam etkileşimine ilişkin sınırlı veriler</li>
-  </ul>
+    const commonLinks = `<div class="links"><a class="pill" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a><a class="pill" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a><a class="pill" href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Privacy</a></div>`;
 
-  <h2>2. Toplanmayan Veriler</h2>
-  <p>
-    CarSpy, kullanıcıdan doğrudan aşağıdaki bilgileri istemez veya bilerek toplamaz:
-  </p>
-  <ul>
-    <li>Kimlik numarası</li>
-    <li>Telefon numarası</li>
-    <li>Ev adresi</li>
-    <li>Ödeme kartı bilgileri</li>
-    <li>Kişi listesi, SMS içeriği veya çağrı kayıtları</li>
-    <li>Mikrofon, kamera veya hassas konum verisi</li>
-  </ul>
+    const i18n = {
+      tr:{eyebrow:'GİZLİLİK MERKEZİ',title:'Gizlilik Politikası',updatedLabel:'Son güncelleme:',updatedDate:'5 Eylül 2026',intro:'Bu politika, CarSpy mobil uygulamasında verilerin nasıl toplandığını, kullanıldığını ve paylaşıldığını açıklar.',summary:'<strong>Kısa özet:</strong> CarSpy gerçek ad, telefon, açık adres veya hassas konum istemez. Oyun özellikleri, analiz ve reklamlar için sınırlı oyun, cihaz ve teknik veriler işlenebilir.',sections:[
+        ['Toplanan veriler',`<ul><li><b>Kullanıcı kimlikleri:</b> Oyuncu kimliği ve seçtiğiniz kullanıcı adı.</li><li><b>Oyun içeriği:</b> Skorlar, başarımlar, seviye/ilerleme, sıralama ve çok oyunculu eşleşme verileri.</li><li><b>Yaklaşık konum:</b> Reklam ve analiz sağlayıcıları IP adresinden ülke veya şehir düzeyinde yaklaşık konum çıkarabilir. CarSpy GPS veya hassas konum istemez.</li><li><b>Cihaz kimlikleri:</b> Uygulama/cihaz tanımlayıcıları ve yalnızca izin verildiğinde Apple reklam kimliği (IDFA).</li><li><b>Kullanım ve reklam verileri:</b> Uygulama açılışları, dokunuşlar, reklam görüntüleme ve reklam etkileşimleri.</li><li><b>Tanılama:</b> Çökme kayıtları, performans ve diğer teknik hata verileri.</li></ul>`],
+        ['Kullanım amaçları',`<p>Veriler oyunu çalıştırmak; profil, skor, başarımlar, leaderboard ve Arena özelliklerini sunmak; reklam göstermek ve ölçmek; analiz yapmak; dolandırıcılığı önlemek; güvenlik, kararlılık ve performansı geliştirmek için kullanılır.</p>`],
+        ['Bağlantı ve takip',`<p>Kullanıcı kimliği, oyun verileri, yaklaşık konum, ürün etkileşimi, reklam verileri ve cihaz kimliği hesabınız/oyuncu kimliğiniz veya cihazınızla ilişkilendirilebilir. Çökme ve diğer tanılama verileri kimliğinizle ilişkilendirilmeden işlenebilir.</p><p>CarSpy, yalnızca Apple’ın ATT iznini veren kullanıcılarda cihaz reklam kimliğini üçüncü taraf reklam ölçümü veya hedefleme amacıyla kullanabilir. Oyun içeriği ve kullanıcı adları reklam takibi için kullanılmaz.</p>`],
+        ['ATT ve reklam tercihleri',`<p>iOS’ta App Tracking Transparency (ATT) penceresinden takip izni verebilir veya reddedebilirsiniz. Ret halinde IDFA erişilemez; oyun çalışmaya devam eder ve uygun olduğunda kişiselleştirilmemiş veya sınırlı reklamlar gösterilebilir. İzni daha sonra iOS Ayarlar bölümünden değiştirebilirsiniz. Bazı bölgelerde Google User Messaging Platform üzerinden ek reklam/gizlilik tercihleri sunulabilir.</p>`],
+        ['Üçüncü taraf hizmetleri',`<p>CarSpy; altyapı, analiz ve oyun verileri için Google Firebase (Firestore, Realtime Database, Cloud Functions ve ilgili servisler), reklam sunumu için Google AdMob ve AdMob aracılığıyla Unity Ads kullanır. Bu sağlayıcılar verileri kendi koşulları ve politikaları kapsamında işleyebilir.</p>${commonLinks}`],
+        ['Toplanmayan veriler',`<p>CarSpy bilerek kimlik numarası, telefon, ev adresi, ödeme kartı, kişi listesi, SMS/arama içeriği, fotoğraf, video, ses, mikrofon, kamera, sağlık verisi veya hassas GPS konumu toplamaz. Kullanıcı adınız gerçek adınız olmak zorunda değildir.</p>`],
+        ['Paylaşım, saklama ve güvenlik',`<p>Veriler satılmaz. Yalnızca oyunun işletilmesi, reklam, analiz, güvenlik ve teknik hizmetler için yukarıdaki sağlayıcılarla paylaşılabilir. Veriler amaç için gerekli olduğu, yasal yükümlülük bulunduğu veya meşru güvenlik ihtiyacı devam ettiği sürece saklanır; ardından silinir ya da anonimleştirilir. Makul teknik ve idari güvenlik önlemleri uygulanır ancak hiçbir sistem tamamen risksiz değildir.</p>`],
+        ['Çocukların gizliliği',`<p>CarSpy 13 yaşın altındaki çocuklara yönelik değildir. 13 yaşından küçük bir kişiye ait verinin bilgimiz dâhilinde işlendiğini düşünüyorsanız bizimle iletişime geçin; uygun adımları atarız.</p>`],
+        ['Haklarınız ve silme talepleri',`<p>Bulunduğunuz yere bağlı olarak verilerinize erişme, düzeltme, silme, işlemeyi kısıtlama veya itiraz etme hakkınız olabilir. Talebinizi, mümkünse uygulamadaki oyuncu kimliğinizle birlikte <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a> adresine gönderin. Kimliğinizi ve talebin size ait olduğunu doğrulamamız gerekebilir.</p>`],
+        ['Uluslararası aktarım, güncellemeler ve iletişim',`<p>Hizmet sağlayıcıları verileri ikamet ettiğiniz ülke dışında işleyebilir ve uygun koruma önlemleri uygulayabilir. Bu politika uygulama veya yasal gereklilikler değiştiğinde güncellenebilir; tarih sayfanın üstünde gösterilir. Sorular için <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]},
+      en:{eyebrow:'PRIVACY CENTER',title:'Privacy Policy',updatedLabel:'Last updated:',updatedDate:'September 5, 2026',intro:'This policy explains how data is collected, used, and shared in the CarSpy mobile application.',summary:'<strong>In short:</strong> CarSpy does not request your real name, phone number, home address, or precise location. Limited gameplay, device, and technical data may be processed for game features, analytics, and advertising.',sections:[
+        ['Data we collect',`<ul><li><b>User identifiers:</b> A player ID and the username you choose.</li><li><b>Gameplay content:</b> Scores, achievements, level/progress, rankings, and multiplayer matchmaking data.</li><li><b>Coarse location:</b> Advertising and analytics providers may infer an approximate country or city from an IP address. CarSpy does not request GPS or precise location.</li><li><b>Device identifiers:</b> App/device identifiers and, only with permission, Apple’s advertising identifier (IDFA).</li><li><b>Usage and advertising data:</b> App launches, taps, ad impressions, and ad interactions.</li><li><b>Diagnostics:</b> Crash logs, performance information, and other technical diagnostics.</li></ul>`],
+        ['How we use data',`<p>Data is used to operate the game; provide profiles, scores, achievements, leaderboards, and Arena; deliver and measure ads; perform analytics; prevent fraud; and improve security, stability, and performance.</p>`],
+        ['Linking and tracking',`<p>User IDs, gameplay data, coarse location, product interaction, advertising data, and device IDs may be linked to your player identity or device. Crash and other diagnostic data may be processed without being linked to your identity.</p><p>CarSpy may use a device advertising identifier for third-party advertising measurement or targeting only when the user grants Apple ATT permission. Gameplay content and usernames are not used for advertising tracking.</p>`],
+        ['ATT and advertising choices',`<p>On iOS, you may allow or deny tracking through the App Tracking Transparency (ATT) prompt. If denied, IDFA is unavailable; the game continues to work and non-personalized or limited ads may be shown where appropriate. You can change the permission later in iOS Settings. Additional advertising/privacy choices may be presented through Google User Messaging Platform in certain regions.</p>`],
+        ['Third-party services',`<p>CarSpy uses Google Firebase (including Firestore, Realtime Database, Cloud Functions, and related services) for infrastructure, analytics, and gameplay data; Google AdMob for advertising; and Unity Ads through AdMob mediation. Providers may process data under their own terms and policies.</p>${commonLinks}`],
+        ['Data we do not collect',`<p>CarSpy does not knowingly collect government IDs, phone numbers, home addresses, payment-card details, contacts, SMS/call contents, photos, videos, audio, microphone or camera content, health data, or precise GPS location. Your username does not need to be your real name.</p>`],
+        ['Sharing, retention, and security',`<p>We do not sell user data. Data may be shared with the providers listed above only for operating the game, advertising, analytics, security, and technical services. Data is retained while needed for these purposes, legal duties, or legitimate security needs, then deleted or anonymized. Reasonable safeguards are used, but no system is risk-free.</p>`],
+        ["Children's privacy",`<p>CarSpy is not directed to children under 13. If you believe we knowingly processed data from a child under 13, contact us and we will take appropriate action.</p>`],
+        ['Your rights and deletion requests',`<p>Depending on your location, you may have rights to access, correct, delete, restrict, or object to processing of your data. Email <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a> and include your in-app player ID where possible. We may need to verify your identity and request.</p>`],
+        ['International transfers, updates, and contact',`<p>Service providers may process data outside your country with appropriate safeguards. We may update this policy when the app or legal requirements change; the date appears above. Questions: <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]},
+      de:{eyebrow:'DATENSCHUTZ',title:'Datenschutzerklärung',updatedLabel:'Zuletzt aktualisiert:',updatedDate:'5. September 2026',intro:'Diese Erklärung beschreibt, wie Daten in der mobilen CarSpy-App erhoben, verwendet und weitergegeben werden.',summary:'<strong>Kurz gesagt:</strong> CarSpy verlangt weder echten Namen, Telefonnummer, Wohnadresse noch genauen Standort. Begrenzte Spiel-, Geräte- und technische Daten können für Funktionen, Analyse und Werbung verarbeitet werden.',sections:[
+        ['Erhobene Daten',`<ul><li><b>Kennungen:</b> Spieler-ID und gewählter Benutzername.</li><li><b>Spielinhalte:</b> Punkte, Erfolge, Fortschritt, Ranglisten und Mehrspieler-Matchmaking.</li><li><b>Ungefährer Standort:</b> Anbieter können Land oder Stadt aus der IP-Adresse ableiten; kein GPS oder genauer Standort.</li><li><b>Gerätekennungen:</b> App-/Gerätekennungen und nur mit Erlaubnis die IDFA.</li><li><b>Nutzungs- und Werbedaten:</b> App-Starts, Berührungen, Anzeigenaufrufe und Interaktionen.</li><li><b>Diagnose:</b> Absturz-, Leistungs- und technische Diagnosedaten.</li></ul>`],
+        ['Verwendungszwecke',`<p>Für Spielbetrieb, Profile, Punkte, Erfolge, Ranglisten und Arena, Werbeauslieferung und -messung, Analyse, Betrugsprävention sowie Sicherheit, Stabilität und Leistung.</p>`],
+        ['Verknüpfung und Tracking',`<p>Benutzer- und Gerätekennungen, Spiel-, Standort-, Interaktions- und Werbedaten können mit Spieler oder Gerät verknüpft sein. Absturz- und sonstige Diagnosedaten können unverknüpft verarbeitet werden. Werbe-Tracking über die IDFA erfolgt nur nach ATT-Einwilligung; Spielinhalte und Benutzernamen werden dafür nicht verwendet.</p>`],
+        ['ATT und Werbeauswahl',`<p>Unter iOS können Sie Tracking im ATT-Dialog erlauben oder ablehnen. Bei Ablehnung ist die IDFA nicht verfügbar; das Spiel funktioniert weiter und es können nicht personalisierte oder eingeschränkte Anzeigen erscheinen. Die Wahl ist in den iOS-Einstellungen änderbar. In bestimmten Regionen kann Google UMP weitere Optionen anzeigen.</p>`],
+        ['Drittanbieter',`<p>CarSpy nutzt Google Firebase (u. a. Firestore, Realtime Database und Cloud Functions), Google AdMob und Unity Ads über AdMob-Mediation. Diese Anbieter verarbeiten Daten nach ihren eigenen Bedingungen.</p>${commonLinks}`],
+        ['Nicht erhobene Daten',`<p>Wir erheben wissentlich keine Ausweis-, Telefon-, Adress-, Zahlungs-, Kontakt-, SMS-/Anruf-, Foto-, Video-, Audio-, Kamera-, Mikrofon-, Gesundheits- oder genauen GPS-Daten. Der Benutzername muss nicht Ihr echter Name sein.</p>`],
+        ['Weitergabe, Speicherung und Sicherheit',`<p>Wir verkaufen keine Nutzerdaten. Eine Weitergabe erfolgt nur an die genannten Anbieter für Betrieb, Werbung, Analyse, Sicherheit und Technik. Daten werden nur so lange wie nötig oder gesetzlich erforderlich gespeichert und danach gelöscht oder anonymisiert. Angemessene Schutzmaßnahmen werden eingesetzt.</p>`],
+        ['Kinder',`<p>CarSpy richtet sich nicht an Kinder unter 13 Jahren. Kontaktieren Sie uns, wenn Sie eine entsprechende Verarbeitung vermuten.</p>`],
+        ['Ihre Rechte und Löschung',`<p>Je nach Standort können Sie Auskunft, Berichtigung, Löschung, Einschränkung oder Widerspruch verlangen. Schreiben Sie mit Ihrer Spieler-ID an <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>. Eine Verifizierung kann erforderlich sein.</p>`],
+        ['Übermittlungen, Änderungen und Kontakt',`<p>Anbieter können Daten mit geeigneten Schutzmaßnahmen außerhalb Ihres Landes verarbeiten. Änderungen werden mit neuem Datum veröffentlicht. Kontakt: <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]},
+      it:{eyebrow:'CENTRO PRIVACY',title:'Informativa sulla privacy',updatedLabel:'Ultimo aggiornamento:',updatedDate:'5 settembre 2026',intro:'Questa informativa spiega come i dati vengono raccolti, usati e condivisi nell’app mobile CarSpy.',summary:'<strong>In breve:</strong> CarSpy non richiede nome reale, numero di telefono, indirizzo o posizione precisa. Dati limitati di gioco, dispositivo e diagnostica possono essere trattati per funzioni, analisi e pubblicità.',sections:[
+        ['Dati raccolti',`<ul><li><b>Identificatori:</b> ID giocatore e nome utente scelto.</li><li><b>Contenuti di gioco:</b> Punteggi, obiettivi, progressi, classifiche e matchmaking multiplayer.</li><li><b>Posizione approssimativa:</b> Paese o città può essere dedotto dall’IP; niente GPS o posizione precisa.</li><li><b>ID dispositivo:</b> Identificatori app/dispositivo e IDFA solo con consenso.</li><li><b>Utilizzo e pubblicità:</b> Avvii, tocchi, visualizzazioni e interazioni pubblicitarie.</li><li><b>Diagnostica:</b> Crash, prestazioni e altri dati tecnici.</li></ul>`],
+        ['Finalità',`<p>Per far funzionare il gioco, profili, punteggi, obiettivi, classifiche e Arena; mostrare e misurare annunci; analisi, prevenzione frodi, sicurezza, stabilità e prestazioni.</p>`],
+        ['Collegamento e tracciamento',`<p>ID utente e dispositivo, dati di gioco, posizione approssimativa, interazioni e pubblicità possono essere collegati al giocatore o dispositivo. I dati diagnostici possono non esserlo. L’IDFA è usato per misurazione o targeting di terze parti solo con autorizzazione ATT; contenuti di gioco e nomi utente non sono usati per il tracking pubblicitario.</p>`],
+        ['ATT e scelte pubblicitarie',`<p>Su iOS puoi consentire o negare il tracking tramite ATT. Se neghi, l’IDFA non è disponibile; il gioco continua e possono apparire annunci non personalizzati o limitati. Puoi cambiare la scelta nelle Impostazioni iOS. Google UMP può offrire ulteriori scelte in alcune regioni.</p>`],
+        ['Servizi di terze parti',`<p>CarSpy usa Google Firebase (Firestore, Realtime Database, Cloud Functions e servizi correlati), Google AdMob e Unity Ads tramite mediazione AdMob. I fornitori trattano i dati secondo le proprie politiche.</p>${commonLinks}`],
+        ['Dati non raccolti',`<p>Non raccogliamo consapevolmente documenti, telefono, indirizzo, carte, contatti, SMS/chiamate, foto, video, audio, microfono, fotocamera, salute o posizione GPS precisa. Il nome utente non deve essere quello reale.</p>`],
+        ['Condivisione, conservazione e sicurezza',`<p>Non vendiamo dati. Possono essere condivisi solo con i fornitori indicati per gioco, pubblicità, analisi, sicurezza e servizi tecnici. Sono conservati finché necessario o richiesto dalla legge, poi eliminati o anonimizzati. Usiamo misure ragionevoli di sicurezza.</p>`],
+        ['Minori',`<p>CarSpy non è rivolto a minori di 13 anni. Contattaci se ritieni che siano stati trattati consapevolmente dati di un minore.</p>`],
+        ['Diritti e cancellazione',`<p>In base al luogo, puoi chiedere accesso, rettifica, cancellazione, limitazione o opposizione. Scrivi a <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a> indicando, se possibile, l’ID giocatore. Potremmo verificare la richiesta.</p>`],
+        ['Trasferimenti, modifiche e contatti',`<p>I fornitori possono trattare dati fuori dal tuo Paese con garanzie adeguate. Gli aggiornamenti saranno pubblicati con una nuova data. Contatto: <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]},
+      es:{eyebrow:'CENTRO DE PRIVACIDAD',title:'Política de privacidad',updatedLabel:'Última actualización:',updatedDate:'5 de septiembre de 2026',intro:'Esta política explica cómo se recopilan, utilizan y comparten datos en la aplicación móvil CarSpy.',summary:'<strong>En resumen:</strong> CarSpy no solicita nombre real, teléfono, domicilio ni ubicación precisa. Se pueden tratar datos limitados de juego, dispositivo y diagnóstico para funciones, análisis y publicidad.',sections:[
+        ['Datos recopilados',`<ul><li><b>Identificadores:</b> ID de jugador y nombre de usuario elegido.</li><li><b>Contenido del juego:</b> Puntuaciones, logros, progreso, clasificaciones y emparejamiento multijugador.</li><li><b>Ubicación aproximada:</b> Los proveedores pueden inferir país o ciudad mediante la IP; no se solicita GPS ni ubicación precisa.</li><li><b>ID del dispositivo:</b> Identificadores de app/dispositivo e IDFA solo con permiso.</li><li><b>Uso y publicidad:</b> Aperturas, pulsaciones, impresiones e interacciones con anuncios.</li><li><b>Diagnóstico:</b> Fallos, rendimiento y otros datos técnicos.</li></ul>`],
+        ['Finalidades',`<p>Operar el juego, perfiles, puntuaciones, logros, clasificaciones y Arena; mostrar y medir anuncios; análisis, prevención del fraude, seguridad, estabilidad y rendimiento.</p>`],
+        ['Vinculación y seguimiento',`<p>Los ID, datos de juego, ubicación aproximada, interacción y publicidad pueden vincularse al jugador o dispositivo. Los diagnósticos pueden tratarse sin vinculación. El IDFA solo se usa para medición o segmentación publicitaria de terceros con permiso ATT; el contenido de juego y los nombres no se usan para seguimiento publicitario.</p>`],
+        ['ATT y opciones publicitarias',`<p>En iOS puedes permitir o rechazar el seguimiento mediante ATT. Si rechazas, el IDFA no está disponible; el juego sigue funcionando y pueden mostrarse anuncios no personalizados o limitados. Puedes cambiarlo en Ajustes de iOS. Google UMP puede mostrar opciones adicionales en algunas regiones.</p>`],
+        ['Servicios de terceros',`<p>CarSpy usa Google Firebase (Firestore, Realtime Database, Cloud Functions y servicios relacionados), Google AdMob y Unity Ads mediante mediación de AdMob. Cada proveedor trata datos conforme a sus políticas.</p>${commonLinks}`],
+        ['Datos que no recopilamos',`<p>No recopilamos deliberadamente documentos oficiales, teléfonos, domicilios, tarjetas, contactos, SMS/llamadas, fotos, vídeos, audio, micrófono, cámara, salud ni GPS preciso. El nombre de usuario no tiene que ser real.</p>`],
+        ['Compartición, conservación y seguridad',`<p>No vendemos datos. Solo pueden compartirse con los proveedores anteriores para juego, publicidad, análisis, seguridad y servicios técnicos. Se conservan mientras sean necesarios o exigidos legalmente y después se eliminan o anonimizan. Aplicamos medidas razonables de seguridad.</p>`],
+        ['Menores',`<p>CarSpy no está dirigido a menores de 13 años. Contáctanos si crees que hemos tratado conscientemente datos de un menor.</p>`],
+        ['Derechos y eliminación',`<p>Según tu ubicación, puedes solicitar acceso, corrección, eliminación, restricción u oposición. Escribe a <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a> con tu ID de jugador si es posible. Puede requerirse verificación.</p>`],
+        ['Transferencias, cambios y contacto',`<p>Los proveedores pueden tratar datos fuera de tu país con salvaguardias adecuadas. Publicaremos cambios con una fecha nueva. Contacto: <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]},
+      fr:{eyebrow:'CENTRE DE CONFIDENTIALITÉ',title:'Politique de confidentialité',updatedLabel:'Dernière mise à jour :',updatedDate:'5 septembre 2026',intro:'Cette politique explique comment les données sont collectées, utilisées et partagées dans l’application mobile CarSpy.',summary:'<strong>En bref :</strong> CarSpy ne demande ni nom réel, ni téléphone, ni adresse, ni localisation précise. Des données limitées de jeu, d’appareil et de diagnostic peuvent être traitées pour les fonctionnalités, l’analyse et la publicité.',sections:[
+        ['Données collectées',`<ul><li><b>Identifiants :</b> ID joueur et nom d’utilisateur choisi.</li><li><b>Contenu de jeu :</b> Scores, succès, progression, classements et matchmaking multijoueur.</li><li><b>Localisation approximative :</b> Pays ou ville déduits de l’adresse IP ; aucun GPS ni localisation précise.</li><li><b>ID d’appareil :</b> Identifiants app/appareil et IDFA uniquement avec autorisation.</li><li><b>Utilisation et publicité :</b> Lancements, clics, impressions et interactions publicitaires.</li><li><b>Diagnostic :</b> Plantages, performances et autres données techniques.</li></ul>`],
+        ['Finalités',`<p>Faire fonctionner le jeu, les profils, scores, succès, classements et Arena ; diffuser et mesurer les annonces ; analyser, prévenir la fraude et améliorer sécurité, stabilité et performances.</p>`],
+        ['Association et suivi',`<p>Les identifiants, données de jeu, localisation approximative, interactions et données publicitaires peuvent être associés au joueur ou à l’appareil. Les diagnostics peuvent ne pas l’être. L’IDFA n’est utilisé pour la mesure ou le ciblage publicitaire tiers qu’avec l’autorisation ATT ; le contenu de jeu et les pseudos ne servent pas au suivi publicitaire.</p>`],
+        ['ATT et choix publicitaires',`<p>Sur iOS, vous pouvez accepter ou refuser le suivi via ATT. En cas de refus, l’IDFA est indisponible ; le jeu continue et des annonces non personnalisées ou limitées peuvent être affichées. Le choix peut être modifié dans Réglages iOS. Google UMP peut proposer d’autres choix selon la région.</p>`],
+        ['Services tiers',`<p>CarSpy utilise Google Firebase (Firestore, Realtime Database, Cloud Functions et services associés), Google AdMob et Unity Ads via la médiation AdMob. Chaque fournisseur traite les données selon ses propres politiques.</p>${commonLinks}`],
+        ['Données non collectées',`<p>Nous ne collectons pas sciemment pièces d’identité, téléphone, adresse, carte bancaire, contacts, SMS/appels, photos, vidéos, audio, microphone, caméra, santé ou GPS précis. Le pseudo ne doit pas être votre vrai nom.</p>`],
+        ['Partage, conservation et sécurité',`<p>Nous ne vendons pas les données. Elles ne peuvent être partagées qu’avec les fournisseurs cités pour le jeu, la publicité, l’analyse, la sécurité et la technique. Elles sont conservées aussi longtemps que nécessaire ou légalement requis, puis supprimées ou anonymisées. Des mesures raisonnables sont appliquées.</p>`],
+        ['Enfants',`<p>CarSpy ne s’adresse pas aux enfants de moins de 13 ans. Contactez-nous si vous pensez que leurs données ont été sciemment traitées.</p>`],
+        ['Vos droits et suppression',`<p>Selon votre lieu, vous pouvez demander accès, correction, suppression, limitation ou opposition. Écrivez à <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a> avec votre ID joueur si possible. Une vérification peut être requise.</p>`],
+        ['Transferts, modifications et contact',`<p>Les fournisseurs peuvent traiter les données hors de votre pays avec des garanties appropriées. Les modifications seront datées. Contact : <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]},
+      ru:{eyebrow:'ЦЕНТР КОНФИДЕНЦИАЛЬНОСТИ',title:'Политика конфиденциальности',updatedLabel:'Последнее обновление:',updatedDate:'5 сентября 2026 г.',intro:'Здесь описано, как мобильное приложение CarSpy собирает, использует и передает данные.',summary:'<strong>Кратко:</strong> CarSpy не запрашивает настоящее имя, телефон, домашний адрес или точную геолокацию. Ограниченные игровые, технические данные и данные устройства могут обрабатываться для функций, аналитики и рекламы.',sections:[
+        ['Собираемые данные',`<ul><li><b>Идентификаторы:</b> ID игрока и выбранное имя пользователя.</li><li><b>Игровые данные:</b> Очки, достижения, прогресс, рейтинги и подбор игроков.</li><li><b>Приблизительное местоположение:</b> Страна или город могут определяться по IP; GPS и точная геолокация не запрашиваются.</li><li><b>ID устройства:</b> Идентификаторы приложения/устройства и IDFA только с разрешения.</li><li><b>Использование и реклама:</b> Запуски, нажатия, показы и взаимодействия с рекламой.</li><li><b>Диагностика:</b> Сбои, производительность и другие технические данные.</li></ul>`],
+        ['Цели использования',`<p>Работа игры, профилей, очков, достижений, рейтингов и Arena; показ и измерение рекламы; аналитика, защита от мошенничества, безопасность, стабильность и производительность.</p>`],
+        ['Связывание и отслеживание',`<p>ID, игровые данные, примерная геолокация, взаимодействия и рекламные данные могут связываться с игроком или устройством. Диагностика может обрабатываться без такой связи. IDFA используется для стороннего рекламного измерения или таргетинга только после разрешения ATT; игровые данные и имена не используются для рекламного отслеживания.</p>`],
+        ['ATT и рекламные настройки',`<p>В iOS можно разрешить или запретить отслеживание через ATT. При отказе IDFA недоступен; игра продолжает работать, возможна неперсонализированная или ограниченная реклама. Выбор меняется в Настройках iOS. В некоторых регионах Google UMP предлагает дополнительные настройки.</p>`],
+        ['Сторонние сервисы',`<p>CarSpy использует Google Firebase (Firestore, Realtime Database, Cloud Functions и связанные сервисы), Google AdMob и Unity Ads через медиацию AdMob. Провайдеры обрабатывают данные по своим правилам.</p>${commonLinks}`],
+        ['Что мы не собираем',`<p>Мы сознательно не собираем документы, телефоны, адреса, платежные карты, контакты, SMS/звонки, фото, видео, аудио, микрофон, камеру, здоровье или точный GPS. Имя пользователя не обязано быть настоящим.</p>`],
+        ['Передача, хранение и безопасность',`<p>Мы не продаем данные. Передача возможна только указанным провайдерам для игры, рекламы, аналитики, безопасности и технических услуг. Данные хранятся до достижения целей или выполнения закона, затем удаляются или обезличиваются. Применяются разумные меры защиты.</p>`],
+        ['Дети',`<p>CarSpy не предназначен для детей младше 13 лет. Сообщите нам, если считаете, что данные ребенка были сознательно обработаны.</p>`],
+        ['Права и удаление',`<p>В зависимости от региона можно запросить доступ, исправление, удаление, ограничение или возражение. Напишите на <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>, указав ID игрока. Может потребоваться проверка.</p>`],
+        ['Передача за рубеж, изменения и контакт',`<p>Провайдеры могут обрабатывать данные за пределами вашей страны с надлежащими мерами защиты. Изменения публикуются с новой датой. Контакт: <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]},
+      'pt-BR':{eyebrow:'CENTRAL DE PRIVACIDADE',title:'Política de Privacidade',updatedLabel:'Última atualização:',updatedDate:'5 de setembro de 2026',intro:'Esta política explica como os dados são coletados, usados e compartilhados no aplicativo CarSpy.',summary:'<strong>Resumo:</strong> O CarSpy não solicita nome real, telefone, endereço residencial ou localização precisa. Dados limitados de jogo, dispositivo e diagnóstico podem ser tratados para recursos, análises e publicidade.',sections:[
+        ['Dados coletados',`<ul><li><b>Identificadores:</b> ID do jogador e nome de usuário escolhido.</li><li><b>Conteúdo de jogo:</b> Pontuações, conquistas, progresso, rankings e pareamento multiplayer.</li><li><b>Localização aproximada:</b> País ou cidade podem ser inferidos pelo IP; não solicitamos GPS ou localização precisa.</li><li><b>ID do dispositivo:</b> Identificadores do app/dispositivo e IDFA somente com permissão.</li><li><b>Uso e publicidade:</b> Aberturas, toques, impressões e interações com anúncios.</li><li><b>Diagnóstico:</b> Falhas, desempenho e outros dados técnicos.</li></ul>`],
+        ['Finalidades',`<p>Operar o jogo, perfis, pontuações, conquistas, rankings e Arena; exibir e medir anúncios; análises, prevenção a fraudes, segurança, estabilidade e desempenho.</p>`],
+        ['Vinculação e rastreamento',`<p>IDs, dados de jogo, localização aproximada, interações e publicidade podem ser vinculados ao jogador ou dispositivo. Diagnósticos podem não ser vinculados. O IDFA só é usado para medição ou segmentação de terceiros com permissão ATT; conteúdo de jogo e nomes não são usados para rastreamento publicitário.</p>`],
+        ['ATT e escolhas de anúncios',`<p>No iOS, você pode permitir ou negar rastreamento pelo ATT. Se negar, o IDFA fica indisponível; o jogo continua e anúncios não personalizados ou limitados podem aparecer. A escolha pode ser alterada nos Ajustes do iOS. O Google UMP pode oferecer escolhas extras em algumas regiões.</p>`],
+        ['Serviços de terceiros',`<p>O CarSpy usa Google Firebase (Firestore, Realtime Database, Cloud Functions e serviços relacionados), Google AdMob e Unity Ads via mediação do AdMob. Os provedores tratam dados segundo suas políticas.</p>${commonLinks}`],
+        ['Dados não coletados',`<p>Não coletamos conscientemente documentos, telefone, endereço, cartões, contatos, SMS/chamadas, fotos, vídeos, áudio, microfone, câmera, saúde ou GPS preciso. O nome de usuário não precisa ser real.</p>`],
+        ['Compartilhamento, retenção e segurança',`<p>Não vendemos dados. Eles só podem ser compartilhados com os provedores acima para jogo, publicidade, análises, segurança e serviços técnicos. São retidos enquanto necessários ou exigidos por lei e depois excluídos ou anonimizados. Usamos medidas razoáveis de segurança.</p>`],
+        ['Crianças',`<p>O CarSpy não é destinado a menores de 13 anos. Entre em contato se acreditar que dados de uma criança foram tratados conscientemente.</p>`],
+        ['Direitos e exclusão',`<p>Dependendo do local, você pode pedir acesso, correção, exclusão, restrição ou oposição. Escreva para <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a> com seu ID de jogador, se possível. Podemos verificar a solicitação.</p>`],
+        ['Transferências, alterações e contato',`<p>Provedores podem tratar dados fora do seu país com proteções adequadas. Alterações serão publicadas com nova data. Contato: <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]},
+      ja:{eyebrow:'プライバシーセンター',title:'プライバシーポリシー',updatedLabel:'最終更新日：',updatedDate:'2026年9月5日',intro:'本ポリシーは、CarSpyモバイルアプリにおけるデータの収集、利用、共有について説明します。',summary:'<strong>概要：</strong> CarSpyは実名、電話番号、住所、正確な位置情報を要求しません。ゲーム機能、分析、広告のために限定的なゲーム、端末、技術データを処理する場合があります。',sections:[
+        ['収集するデータ',`<ul><li><b>ユーザー識別子：</b> プレイヤーIDと選択したユーザー名。</li><li><b>ゲームプレイ：</b> スコア、実績、進行状況、ランキング、マルチプレイのマッチング。</li><li><b>おおよその位置：</b> IPから国・都市が推定される場合があります。GPSや正確な位置は要求しません。</li><li><b>端末ID：</b> アプリ/端末IDおよび許可された場合のみIDFA。</li><li><b>利用・広告データ：</b> 起動、タップ、広告表示、広告操作。</li><li><b>診断：</b> クラッシュ、性能、その他の技術情報。</li></ul>`],
+        ['利用目的',`<p>ゲーム、プロフィール、スコア、実績、ランキング、Arenaの提供、広告配信・測定、分析、不正防止、安全性、安定性、性能改善に使用します。</p>`],
+        ['関連付けとトラッキング',`<p>識別子、ゲーム、概略位置、操作、広告データはプレイヤーまたは端末に関連付けられる場合があります。診断データは関連付けずに処理される場合があります。IDFAによる第三者広告の測定・ターゲティングはATTの許可時のみ行い、ゲーム内容やユーザー名を広告トラッキングには使用しません。</p>`],
+        ['ATTと広告の選択',`<p>iOSではATT画面で許可または拒否できます。拒否するとIDFAは利用できませんがゲームは動作し、非パーソナライズ広告または制限付き広告が表示される場合があります。iOS設定で後から変更できます。地域によりGoogle UMPの追加選択肢が表示されます。</p>`],
+        ['第三者サービス',`<p>CarSpyはGoogle Firebase（Firestore、Realtime Database、Cloud Functions等）、Google AdMob、AdMobメディエーション経由のUnity Adsを使用します。各社は独自の方針に基づき処理します。</p>${commonLinks}`],
+        ['収集しないデータ',`<p>公的ID、電話、住所、カード、連絡先、SMS/通話、写真、動画、音声、マイク、カメラ、健康情報、正確なGPS位置を意図的に収集しません。ユーザー名は実名である必要はありません。</p>`],
+        ['共有・保存・安全性',`<p>データを販売しません。ゲーム、広告、分析、安全、技術サービスのため上記提供者と共有する場合があります。必要または法的に求められる期間保持し、その後削除または匿名化します。合理的な安全対策を講じます。</p>`],
+        ['子どものプライバシー',`<p>CarSpyは13歳未満を対象としていません。該当するデータが処理されたと思われる場合はご連絡ください。</p>`],
+        ['権利と削除',`<p>地域によりアクセス、訂正、削除、制限、異議申立てを請求できます。可能であればプレイヤーIDを添えて <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a> へご連絡ください。確認が必要な場合があります。</p>`],
+        ['国際移転・変更・連絡先',`<p>提供者は適切な保護措置の下、国外でデータを処理する場合があります。変更時は日付を更新します。連絡先：<a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a></p>`]
+      ]},
+      ko:{eyebrow:'개인정보 보호 센터',title:'개인정보 처리방침',updatedLabel:'최종 업데이트:',updatedDate:'2026년 9월 5일',intro:'본 방침은 CarSpy 모바일 앱에서 데이터가 수집, 이용 및 공유되는 방식을 설명합니다.',summary:'<strong>요약:</strong> CarSpy는 실명, 전화번호, 주소 또는 정확한 위치를 요구하지 않습니다. 게임 기능, 분석 및 광고를 위해 제한적인 게임, 기기 및 기술 데이터가 처리될 수 있습니다.',sections:[
+        ['수집 데이터',`<ul><li><b>사용자 식별자:</b> 플레이어 ID와 선택한 사용자 이름.</li><li><b>게임 콘텐츠:</b> 점수, 업적, 진행도, 순위 및 멀티플레이 매칭.</li><li><b>대략적 위치:</b> IP로 국가/도시가 추정될 수 있으며 GPS나 정확한 위치는 요청하지 않습니다.</li><li><b>기기 ID:</b> 앱/기기 식별자 및 허용한 경우에만 IDFA.</li><li><b>사용 및 광고:</b> 앱 실행, 탭, 광고 노출 및 상호작용.</li><li><b>진단:</b> 충돌, 성능 및 기타 기술 데이터.</li></ul>`],
+        ['이용 목적',`<p>게임, 프로필, 점수, 업적, 순위, Arena 운영, 광고 제공·측정, 분석, 사기 방지, 보안, 안정성 및 성능 개선에 사용합니다.</p>`],
+        ['연결 및 추적',`<p>식별자, 게임, 대략적 위치, 상호작용 및 광고 데이터는 플레이어나 기기에 연결될 수 있습니다. 진단 데이터는 연결되지 않을 수 있습니다. IDFA를 통한 제3자 광고 측정·타기팅은 ATT 허용 시에만 이루어지며 게임 콘텐츠와 사용자 이름은 광고 추적에 사용하지 않습니다.</p>`],
+        ['ATT 및 광고 선택',`<p>iOS ATT 창에서 추적을 허용하거나 거부할 수 있습니다. 거부하면 IDFA를 사용할 수 없지만 게임은 계속 작동하며 비개인화 또는 제한 광고가 표시될 수 있습니다. iOS 설정에서 변경할 수 있고 일부 지역에서는 Google UMP가 추가 선택권을 제공합니다.</p>`],
+        ['제3자 서비스',`<p>CarSpy는 Google Firebase(Firestore, Realtime Database, Cloud Functions 등), Google AdMob 및 AdMob 미디에이션을 통한 Unity Ads를 사용합니다. 각 제공자는 자체 정책에 따라 처리합니다.</p>${commonLinks}`],
+        ['수집하지 않는 데이터',`<p>정부 ID, 전화, 주소, 결제카드, 연락처, SMS/통화, 사진, 영상, 음성, 마이크, 카메라, 건강 또는 정확한 GPS 위치를 고의로 수집하지 않습니다. 사용자 이름은 실명일 필요가 없습니다.</p>`],
+        ['공유·보관·보안',`<p>데이터를 판매하지 않습니다. 게임, 광고, 분석, 보안 및 기술 서비스에 필요한 경우 위 제공자와 공유될 수 있습니다. 필요한 기간 또는 법적 요구 기간 보관 후 삭제 또는 익명화하며 합리적인 보안 조치를 적용합니다.</p>`],
+        ['아동 개인정보',`<p>CarSpy는 만 13세 미만 아동을 대상으로 하지 않습니다. 해당 데이터 처리 가능성이 있다면 연락해 주세요.</p>`],
+        ['권리 및 삭제',`<p>지역에 따라 열람, 정정, 삭제, 제한 또는 반대를 요청할 수 있습니다. 가능한 경우 플레이어 ID와 함께 <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>으로 연락하세요. 확인이 필요할 수 있습니다.</p>`],
+        ['국외 이전·변경·문의',`<p>제공자는 적절한 보호조치와 함께 해외에서 데이터를 처리할 수 있습니다. 변경 시 날짜를 갱신합니다. 문의: <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a></p>`]
+      ]},
+      ar:{eyebrow:'مركز الخصوصية',title:'سياسة الخصوصية',updatedLabel:'آخر تحديث:',updatedDate:'5 سبتمبر 2026',intro:'توضح هذه السياسة كيفية جمع البيانات واستخدامها ومشاركتها في تطبيق CarSpy.',summary:'<strong>باختصار:</strong> لا يطلب CarSpy الاسم الحقيقي أو رقم الهاتف أو عنوان المنزل أو الموقع الدقيق. قد تتم معالجة بيانات محدودة عن اللعب والجهاز والتشخيص لتشغيل الميزات والتحليلات والإعلانات.',sections:[
+        ['البيانات التي نجمعها',`<ul><li><b>المعرّفات:</b> معرّف اللاعب واسم المستخدم الذي تختاره.</li><li><b>محتوى اللعب:</b> النقاط والإنجازات والتقدم والتصنيفات ومطابقة اللعب الجماعي.</li><li><b>الموقع التقريبي:</b> قد يستنتج المزوّدون البلد أو المدينة من عنوان IP؛ ولا نطلب GPS أو الموقع الدقيق.</li><li><b>معرّفات الجهاز:</b> معرّفات التطبيق/الجهاز وIDFA فقط بعد الإذن.</li><li><b>الاستخدام والإعلانات:</b> فتح التطبيق والنقرات ومرات ظهور الإعلانات والتفاعل معها.</li><li><b>التشخيص:</b> الأعطال والأداء وبيانات تقنية أخرى.</li></ul>`],
+        ['أغراض الاستخدام',`<p>لتشغيل اللعبة والملفات الشخصية والنقاط والإنجازات والتصنيفات وArena؛ وعرض الإعلانات وقياسها؛ والتحليلات ومنع الاحتيال وتحسين الأمان والاستقرار والأداء.</p>`],
+        ['الربط والتتبع',`<p>قد تُربط المعرّفات وبيانات اللعب والموقع التقريبي والتفاعل والإعلانات باللاعب أو الجهاز، بينما قد تُعالج بيانات التشخيص دون ربط. لا يُستخدم IDFA للقياس أو الاستهداف الإعلاني للغير إلا بعد موافقة ATT، ولا نستخدم محتوى اللعب أو أسماء المستخدمين للتتبع الإعلاني.</p>`],
+        ['ATT وخيارات الإعلانات',`<p>على iOS يمكنك السماح بالتتبع أو رفضه عبر ATT. عند الرفض لا يتوفر IDFA، لكن اللعبة تستمر وقد تظهر إعلانات غير مخصصة أو محدودة. يمكنك تغيير الخيار من إعدادات iOS. وقد يوفر Google UMP خيارات إضافية في بعض المناطق.</p>`],
+        ['خدمات الطرف الثالث',`<p>يستخدم CarSpy خدمات Google Firebase (بما فيها Firestore وRealtime Database وCloud Functions)، وGoogle AdMob، وUnity Ads عبر وساطة AdMob. يعالج كل مزود البيانات وفق سياساته.</p>${commonLinks}`],
+        ['بيانات لا نجمعها',`<p>لا نجمع عن قصد أرقام الهوية أو الهاتف أو العنوان أو البطاقات أو جهات الاتصال أو الرسائل/المكالمات أو الصور أو الفيديو أو الصوت أو الميكروفون أو الكاميرا أو الصحة أو موقع GPS الدقيق. ولا يلزم أن يكون اسم المستخدم اسمك الحقيقي.</p>`],
+        ['المشاركة والاحتفاظ والأمان',`<p>لا نبيع البيانات. وقد تُشارك فقط مع المزوّدين المذكورين لتشغيل اللعبة والإعلانات والتحليلات والأمان والخدمات التقنية. تُحتفظ بها للمدة اللازمة أو المطلوبة قانونًا ثم تُحذف أو تُجعل مجهولة. نطبق إجراءات أمان معقولة.</p>`],
+        ['خصوصية الأطفال',`<p>CarSpy غير موجه لمن هم دون 13 عامًا. تواصل معنا إذا اعتقدت أننا عالجنا بيانات طفل عن علم.</p>`],
+        ['حقوقك والحذف',`<p>بحسب بلدك يمكنك طلب الوصول أو التصحيح أو الحذف أو التقييد أو الاعتراض. راسل <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a> وأرفق معرّف اللاعب إن أمكن. قد نطلب التحقق.</p>`],
+        ['النقل والتحديث والتواصل',`<p>قد يعالج المزوّدون البيانات خارج بلدك مع ضمانات مناسبة. سنحدّث التاريخ عند تعديل السياسة. التواصل: <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]},
+      nl:{eyebrow:'PRIVACYCENTRUM',title:'Privacybeleid',updatedLabel:'Laatst bijgewerkt:',updatedDate:'5 september 2026',intro:'Dit beleid legt uit hoe gegevens in de mobiele CarSpy-app worden verzameld, gebruikt en gedeeld.',summary:'<strong>Kort:</strong> CarSpy vraagt niet om je echte naam, telefoonnummer, adres of precieze locatie. Beperkte spel-, apparaat- en technische gegevens kunnen worden verwerkt voor functies, analyse en advertenties.',sections:[
+        ['Verzamelde gegevens',`<ul><li><b>Identificatoren:</b> Speler-ID en gekozen gebruikersnaam.</li><li><b>Gameplay:</b> Scores, prestaties, voortgang, klassementen en multiplayer-matching.</li><li><b>Geschatte locatie:</b> Land of stad kan uit IP worden afgeleid; geen GPS of precieze locatie.</li><li><b>Apparaat-ID:</b> App-/apparaat-ID’s en alleen met toestemming IDFA.</li><li><b>Gebruik en advertenties:</b> Starts, tikken, advertentieweergaven en interacties.</li><li><b>Diagnostiek:</b> Crashes, prestaties en andere technische gegevens.</li></ul>`],
+        ['Doeleinden',`<p>Voor het spel, profielen, scores, prestaties, klassementen en Arena; advertenties tonen en meten; analyse, fraudepreventie, veiligheid, stabiliteit en prestaties.</p>`],
+        ['Koppeling en tracking',`<p>ID’s, gameplay, geschatte locatie, interactie en advertentiegegevens kunnen aan speler of apparaat zijn gekoppeld. Diagnostiek kan niet-gekoppeld worden verwerkt. IDFA wordt alleen na ATT-toestemming gebruikt voor advertentiemeting of targeting door derden; gameplay en gebruikersnamen niet.</p>`],
+        ['ATT en advertentiekeuzes',`<p>Op iOS kun je tracking via ATT toestaan of weigeren. Bij weigering is IDFA niet beschikbaar; het spel blijft werken en niet-gepersonaliseerde of beperkte advertenties kunnen verschijnen. Je kunt dit wijzigen in iOS-instellingen. Google UMP kan regionaal extra keuzes tonen.</p>`],
+        ['Diensten van derden',`<p>CarSpy gebruikt Google Firebase (Firestore, Realtime Database, Cloud Functions en verwante diensten), Google AdMob en Unity Ads via AdMob-mediation. Providers verwerken gegevens volgens hun beleid.</p>${commonLinks}`],
+        ['Niet verzameld',`<p>We verzamelen niet bewust overheids-ID’s, telefoon, adres, betaalkaarten, contacten, SMS/oproepen, foto’s, video, audio, microfoon, camera, gezondheid of precieze GPS-locatie. Je gebruikersnaam hoeft niet echt te zijn.</p>`],
+        ['Delen, bewaren en beveiligen',`<p>We verkopen geen gegevens. Delen kan alleen met de genoemde providers voor spel, advertenties, analyse, veiligheid en techniek. Gegevens blijven zolang nodig of wettelijk vereist en worden daarna verwijderd of geanonimiseerd. We nemen redelijke beveiligingsmaatregelen.</p>`],
+        ['Kinderen',`<p>CarSpy is niet gericht op kinderen onder 13. Neem contact op als je denkt dat zulke gegevens bewust zijn verwerkt.</p>`],
+        ['Rechten en verwijdering',`<p>Afhankelijk van je locatie kun je inzage, correctie, verwijdering, beperking of bezwaar vragen. Mail <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a> met zo mogelijk je speler-ID. Verificatie kan nodig zijn.</p>`],
+        ['Overdracht, wijzigingen en contact',`<p>Providers kunnen gegevens buiten je land verwerken met passende waarborgen. Wijzigingen krijgen een nieuwe datum. Contact: <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]},
+      nb:{eyebrow:'PERSONVERNSENTER',title:'Personvernerklæring',updatedLabel:'Sist oppdatert:',updatedDate:'5. september 2026',intro:'Denne erklæringen forklarer hvordan data samles inn, brukes og deles i CarSpy-appen.',summary:'<strong>Kort fortalt:</strong> CarSpy ber ikke om ekte navn, telefonnummer, hjemmeadresse eller nøyaktig posisjon. Begrensede spill-, enhets- og tekniske data kan behandles for funksjoner, analyse og annonser.',sections:[
+        ['Data vi samler inn',`<ul><li><b>Identifikatorer:</b> Spiller-ID og valgt brukernavn.</li><li><b>Spillinnhold:</b> Poeng, prestasjoner, fremdrift, rangering og flerspiller-matching.</li><li><b>Omtrentlig posisjon:</b> Land eller by kan utledes fra IP; ikke GPS eller nøyaktig posisjon.</li><li><b>Enhets-ID:</b> App-/enhets-ID og bare med tillatelse IDFA.</li><li><b>Bruk og annonser:</b> Oppstart, trykk, annonsevisninger og interaksjoner.</li><li><b>Diagnostikk:</b> Krasj, ytelse og andre tekniske data.</li></ul>`],
+        ['Formål',`<p>Drift av spill, profiler, poeng, prestasjoner, rangering og Arena; vise og måle annonser; analyse, svindelforebygging, sikkerhet, stabilitet og ytelse.</p>`],
+        ['Kobling og sporing',`<p>ID-er, spilldata, omtrentlig posisjon, interaksjons- og annonsedata kan kobles til spiller eller enhet. Diagnostikk kan behandles uten kobling. IDFA brukes bare etter ATT-samtykke til tredjeparts annonsemåling eller målretting; spillinnhold og brukernavn brukes ikke til annonsesporing.</p>`],
+        ['ATT og annonsevalg',`<p>På iOS kan du tillate eller avslå sporing via ATT. Ved avslag er IDFA utilgjengelig; spillet fungerer fortsatt, og ikke-personaliserte eller begrensede annonser kan vises. Valget kan endres i iOS-innstillinger. Google UMP kan gi flere valg i enkelte regioner.</p>`],
+        ['Tredjepartstjenester',`<p>CarSpy bruker Google Firebase (Firestore, Realtime Database, Cloud Functions og relaterte tjenester), Google AdMob og Unity Ads via AdMob-mediering. Leverandørene behandler data etter egne retningslinjer.</p>${commonLinks}`],
+        ['Data vi ikke samler inn',`<p>Vi samler ikke bevisst inn offentlig ID, telefon, adresse, betalingskort, kontakter, SMS/samtaler, bilder, video, lyd, mikrofon, kamera, helse eller nøyaktig GPS. Brukernavnet trenger ikke være ekte.</p>`],
+        ['Deling, lagring og sikkerhet',`<p>Vi selger ikke data. De kan bare deles med nevnte leverandører for spill, annonser, analyse, sikkerhet og teknikk. Data beholdes så lenge nødvendig eller lovpålagt, deretter slettes eller anonymiseres de. Rimelige sikkerhetstiltak brukes.</p>`],
+        ['Barn',`<p>CarSpy er ikke rettet mot barn under 13 år. Kontakt oss hvis du tror slike data er behandlet med viten.</p>`],
+        ['Rettigheter og sletting',`<p>Avhengig av bosted kan du be om innsyn, retting, sletting, begrensning eller protestere. Send e-post til <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a> med spiller-ID hvis mulig. Verifisering kan kreves.</p>`],
+        ['Overføring, endringer og kontakt',`<p>Leverandører kan behandle data utenfor landet med egnede garantier. Endringer publiseres med ny dato. Kontakt: <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]},
+      fil:{eyebrow:'PRIVACY CENTER',title:'Patakaran sa Privacy',updatedLabel:'Huling na-update:',updatedDate:'Setyembre 5, 2026',intro:'Ipinapaliwanag ng patakarang ito kung paano kinokolekta, ginagamit, at ibinabahagi ang data sa CarSpy mobile app.',summary:'<strong>Sa madaling sabi:</strong> Hindi hinihingi ng CarSpy ang tunay na pangalan, numero ng telepono, tirahan, o eksaktong lokasyon. Maaaring iproseso ang limitadong gameplay, device, at technical data para sa features, analytics, at ads.',sections:[
+        ['Data na kinokolekta',`<ul><li><b>Mga identifier:</b> Player ID at piniling username.</li><li><b>Gameplay:</b> Scores, achievements, progress, rankings, at multiplayer matching.</li><li><b>Tinatayang lokasyon:</b> Maaaring matukoy ang bansa o lungsod mula sa IP; walang GPS o precise location.</li><li><b>Device ID:</b> App/device identifiers at IDFA kapag pinahintulutan.</li><li><b>Usage at ads:</b> App launches, taps, ad impressions, at interactions.</li><li><b>Diagnostics:</b> Crashes, performance, at ibang technical data.</li></ul>`],
+        ['Mga layunin',`<p>Para patakbuhin ang laro, profiles, scores, achievements, rankings at Arena; maghatid at magsukat ng ads; analytics, fraud prevention, security, stability at performance.</p>`],
+        ['Pag-link at tracking',`<p>Maaaring maiugnay sa player o device ang IDs, gameplay, tinatayang lokasyon, interaction at advertising data. Maaaring hindi maiugnay ang diagnostics. Ginagamit lang ang IDFA para sa third-party ad measurement o targeting kapag pinayagan ang ATT; hindi ginagamit ang gameplay at usernames para sa ad tracking.</p>`],
+        ['ATT at ad choices',`<p>Sa iOS maaari mong payagan o tanggihan ang tracking sa ATT. Kapag tinanggihan, walang IDFA; gagana pa rin ang laro at maaaring magpakita ng non-personalized o limited ads. Mababago ito sa iOS Settings. Maaaring magbigay ang Google UMP ng karagdagang choices sa ilang rehiyon.</p>`],
+        ['Third-party services',`<p>Gumagamit ang CarSpy ng Google Firebase (Firestore, Realtime Database, Cloud Functions at kaugnay na serbisyo), Google AdMob at Unity Ads sa AdMob mediation. Nagpoproseso ang providers ayon sa sarili nilang policy.</p>${commonLinks}`],
+        ['Hindi namin kinokolekta',`<p>Hindi namin sinasadyang kolektahin ang government ID, telepono, address, card, contacts, SMS/calls, photos, video, audio, microphone, camera, health o eksaktong GPS. Hindi kailangang tunay ang username.</p>`],
+        ['Pagbabahagi, retention at security',`<p>Hindi kami nagbebenta ng data. Maaari lang itong ibahagi sa providers sa itaas para sa laro, ads, analytics, security at technical services. Itinatago habang kailangan o hinihingi ng batas, pagkatapos ay binubura o ina-anonymize. Gumagamit kami ng makatuwirang safeguards.</p>`],
+        ['Privacy ng mga bata',`<p>Hindi para sa batang wala pang 13 ang CarSpy. Makipag-ugnayan kung naniniwala kang sadyang naproseso ang data ng bata.</p>`],
+        ['Mga karapatan at deletion',`<p>Depende sa lokasyon, maaari kang humiling ng access, correction, deletion, restriction o objection. Mag-email sa <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a> kasama ang player ID kung maaari. Maaaring kailanganin ang verification.</p>`],
+        ['Transfers, updates at contact',`<p>Maaaring magproseso ang providers sa ibang bansa na may angkop na safeguards. Ilalathala ang pagbabago na may bagong petsa. Contact: <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]},
+      hi:{eyebrow:'गोपनीयता केंद्र',title:'गोपनीयता नीति',updatedLabel:'अंतिम अपडेट:',updatedDate:'5 सितंबर 2026',intro:'यह नीति बताती है कि CarSpy मोबाइल ऐप में डेटा कैसे एकत्र, उपयोग और साझा किया जाता है।',summary:'<strong>संक्षेप में:</strong> CarSpy वास्तविक नाम, फ़ोन नंबर, घर का पता या सटीक स्थान नहीं मांगता। सुविधाओं, विश्लेषण और विज्ञापनों के लिए सीमित गेमप्ले, डिवाइस और तकनीकी डेटा संसाधित हो सकता है।',sections:[
+        ['हम जो डेटा एकत्र करते हैं',`<ul><li><b>पहचानकर्ता:</b> प्लेयर ID और चुना हुआ यूज़रनेम।</li><li><b>गेमप्ले:</b> स्कोर, उपलब्धियाँ, प्रगति, रैंकिंग और मल्टीप्लेयर मैचिंग।</li><li><b>अनुमानित स्थान:</b> IP से देश या शहर का अनुमान; GPS या सटीक स्थान नहीं।</li><li><b>डिवाइस ID:</b> ऐप/डिवाइस पहचानकर्ता और अनुमति मिलने पर ही IDFA।</li><li><b>उपयोग और विज्ञापन:</b> ऐप लॉन्च, टैप, विज्ञापन प्रदर्शन और इंटरैक्शन।</li><li><b>डायग्नोस्टिक्स:</b> क्रैश, प्रदर्शन और अन्य तकनीकी डेटा।</li></ul>`],
+        ['उपयोग के उद्देश्य',`<p>गेम, प्रोफ़ाइल, स्कोर, उपलब्धियाँ, रैंकिंग और Arena चलाने; विज्ञापन दिखाने और मापने; विश्लेषण, धोखाधड़ी रोकने, सुरक्षा, स्थिरता और प्रदर्शन सुधारने के लिए।</p>`],
+        ['लिंकिंग और ट्रैकिंग',`<p>ID, गेमप्ले, अनुमानित स्थान, इंटरैक्शन और विज्ञापन डेटा प्लेयर या डिवाइस से लिंक हो सकता है। डायग्नोस्टिक डेटा बिना लिंक के संसाधित हो सकता है। IDFA का उपयोग तीसरे पक्ष के विज्ञापन मापन या लक्ष्यीकरण के लिए केवल ATT अनुमति के बाद होता है; गेमप्ले और यूज़रनेम विज्ञापन ट्रैकिंग में उपयोग नहीं होते।</p>`],
+        ['ATT और विज्ञापन विकल्प',`<p>iOS पर ATT द्वारा ट्रैकिंग स्वीकार या अस्वीकार कर सकते हैं। अस्वीकार करने पर IDFA उपलब्ध नहीं होगा; गेम चलता रहेगा और गैर-वैयक्तिकृत या सीमित विज्ञापन दिख सकते हैं। इसे iOS Settings में बदल सकते हैं। कुछ क्षेत्रों में Google UMP अतिरिक्त विकल्प दे सकता है।</p>`],
+        ['तीसरे पक्ष की सेवाएँ',`<p>CarSpy Google Firebase (Firestore, Realtime Database, Cloud Functions आदि), Google AdMob और AdMob mediation के माध्यम से Unity Ads उपयोग करता है। प्रदाता अपनी नीतियों के अनुसार डेटा संसाधित करते हैं।</p>${commonLinks}`],
+        ['जो डेटा हम नहीं लेते',`<p>हम जानबूझकर सरकारी ID, फ़ोन, पता, कार्ड, संपर्क, SMS/कॉल, फोटो, वीडियो, ऑडियो, माइक्रोफोन, कैमरा, स्वास्थ्य या सटीक GPS डेटा नहीं लेते। यूज़रनेम वास्तविक नाम होना आवश्यक नहीं है।</p>`],
+        ['साझाकरण, रखरखाव और सुरक्षा',`<p>हम डेटा बेचते नहीं हैं। गेम, विज्ञापन, विश्लेषण, सुरक्षा और तकनीकी सेवाओं के लिए इसे केवल ऊपर बताए प्रदाताओं के साथ साझा किया जा सकता है। आवश्यक या कानूनी अवधि तक रखकर हटाया या अनाम किया जाता है। उचित सुरक्षा उपाय लागू होते हैं।</p>`],
+        ['बच्चों की गोपनीयता',`<p>CarSpy 13 वर्ष से कम बच्चों के लिए नहीं है। यदि आपको लगता है कि बच्चे का डेटा जानबूझकर संसाधित हुआ है तो संपर्क करें।</p>`],
+        ['अधिकार और हटाना',`<p>स्थान के अनुसार आप पहुँच, सुधार, हटाने, सीमा या आपत्ति का अनुरोध कर सकते हैं। संभव हो तो प्लेयर ID के साथ <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a> पर लिखें। सत्यापन आवश्यक हो सकता है।</p>`],
+        ['अंतरराष्ट्रीय स्थानांतरण, बदलाव और संपर्क',`<p>प्रदाता उचित सुरक्षा के साथ देश के बाहर डेटा संसाधित कर सकते हैं। बदलाव नई तारीख के साथ प्रकाशित होंगे। संपर्क: <a href="mailto:metinakanay@gmail.com">metinakanay@gmail.com</a>.</p>`]
+      ]}
+    };
 
-  <h2>3. Verilerin Kullanım Amaçları</h2>
-  <p>İşlenen veriler şu amaçlarla kullanılabilir:</p>
-  <ul>
-    <li>Oyun deneyimini sunmak ve geliştirmek</li>
-    <li>Skor, başarı ve sıralama sistemlerini çalıştırmak</li>
-    <li>Hataları tespit etmek ve performansı iyileştirmek</li>
-    <li>Ödüllü reklam sistemini yönetmek</li>
-    <li>Uygulamanın güvenliğini ve teknik sürekliliğini sağlamak</li>
-  </ul>
+    /* Use the complete English policy as a safe fallback while keeping interface labels localized. */
+    const compact = {
+      'it':i18n.it,'es':i18n.es,'fr':i18n.fr,'ru':i18n.ru,'pt-BR':i18n['pt-BR'],'ja':i18n.ja,'ko':i18n.ko,'ar':i18n.ar,'nl':i18n.nl,'nb':i18n.nb,'fil':i18n.fil,'hi':i18n.hi
+    };
+    const interfaceOnly = {
+      de:['DATENSCHUTZ','Datenschutzerklärung','Zuletzt aktualisiert:','5. September 2026'],
+      it:['CENTRO PRIVACY','Informativa sulla privacy','Ultimo aggiornamento:','5 settembre 2026'],
+      es:['CENTRO DE PRIVACIDAD','Política de privacidad','Última actualización:','5 de septiembre de 2026'],
+      fr:['CENTRE DE CONFIDENTIALITÉ','Politique de confidentialité','Dernière mise à jour :','5 septembre 2026'],
+      ru:['ЦЕНТР КОНФИДЕНЦИАЛЬНОСТИ','Политика конфиденциальности','Последнее обновление:','5 сентября 2026 г.'],
+      'pt-BR':['CENTRAL DE PRIVACIDADE','Política de Privacidade','Última atualização:','5 de setembro de 2026'],
+      ja:['プライバシーセンター','プライバシーポリシー','最終更新日：','2026年9月5日'],ko:['개인정보 보호 센터','개인정보 처리방침','최종 업데이트:','2026년 9월 5일'],ar:['مركز الخصوصية','سياسة الخصوصية','آخر تحديث:','5 سبتمبر 2026'],nl:['PRIVACYCENTRUM','Privacybeleid','Laatst bijgewerkt:','5 september 2026'],nb:['PERSONVERNSENTER','Personvernerklæring','Sist oppdatert:','5. september 2026'],fil:['PRIVACY CENTER','Patakaran sa Privacy','Huling na-update:','Setyembre 5, 2026'],hi:['गोपनीयता केंद्र','गोपनीयता नीति','अंतिम अपडेट:','5 सितंबर 2026']
+    };
 
-  <h2>4. Üçüncü Taraf Servisler</h2>
-  <p>
-    CarSpy, bazı özelliklerin çalışması için üçüncü taraf servislerden yararlanabilir. Bunlara örnek olarak
-    reklam servisleri, analiz araçları, hata izleme sistemleri veya bulut tabanlı skor/sıralama altyapıları verilebilir.
-    Bu servisler kendi sistemleri üzerinden sınırlı teknik veri işleyebilir.
-  </p>
+    const menu=document.getElementById('languageMenu'), btn=document.getElementById('languageButton'), current=document.getElementById('currentLanguage');
+    languages.forEach(([code,flag,name])=>{const b=document.createElement('button');b.type='button';b.dataset.lang=code;b.innerHTML=`<span>${flag}</span><span>${name}</span>`;b.onclick=()=>setLanguage(code);menu.appendChild(b)});
+    btn.onclick=()=>{const open=menu.classList.toggle('open');btn.setAttribute('aria-expanded',String(open))};
+    document.addEventListener('click',e=>{if(!e.target.closest('.language')){menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
 
-  <h2>5. Reklamlar</h2>
-  <p>
-    Uygulamada ödüllü reklamlar bulunabilir. Reklam sağlayıcıları, reklam sunumu, performans ölçümü ve sahtekarlığın
-    önlenmesi gibi amaçlarla cihaz veya uygulama kullanımına ilişkin bazı teknik verileri işleyebilir.
-  </p>
-
-  <h2>6. Veri Paylaşımı</h2>
-  <p>
-    CarSpy, kullanıcı verilerini satmaz. Ancak uygulamanın çalışması için gerekli olan reklam, analiz,
-    hata takibi veya altyapı hizmeti sağlayan üçüncü taraflarla sınırlı veri paylaşımı olabilir.
-  </p>
-
-  <h2>7. Veri Saklama</h2>
-  <p>
-    Veriler, yalnızca uygulamanın işlevlerini yerine getirmek, teknik sorunları çözmek ve hizmeti sürdürmek için gerekli olduğu süre boyunca saklanır.
-  </p>
-
-  <h2>8. Güvenlik</h2>
-  <p>
-    Verilerin korunması için makul teknik ve idari önlemler uygulanır. Bununla birlikte, internet üzerinden yapılan hiçbir veri aktarımı
-    veya elektronik saklama yöntemi tamamen risksiz değildir.
-  </p>
-
-  <h2>9. Kullanıcı Hakları</h2>
-  <p>
-    Kullanıcılar, kendileriyle ilişkili veriler hakkında soru sormak veya uygun olduğu ölçüde silme talebinde bulunmak için iletişime geçebilir.
-  </p>
-
-  <h2>10. Bu Politikanın Güncellenmesi</h2>
-  <p>
-    Bu Gizlilik Politikası zaman zaman güncellenebilir. Güncel sürüm her zaman bu sayfada yayımlanır.
-  </p>
-
-  <h2>11. İletişim</h2>
-  <p>
-    Gizlilik politikasıyla ilgili sorular için bizimle şu adresten iletişime geçebilirsiniz:<br />
-    <strong>E-posta:</strong> metinakanay@gmail.com
-  </p>
-
-  <hr />
-
-  <h1>CarSpy Privacy Policy</h1>
-  <p class="muted"><strong>Last updated:</strong> April 21, 2026</p>
-
-  <p>
-    This Privacy Policy explains how the CarSpy mobile application handles user data.
-    CarSpy is designed to provide a car recognition game experience. The app does not directly request
-    personal details such as full name, phone number, or home address from users.
-  </p>
-
-  <h2>1. Data We May Process</h2>
-  <ul>
-    <li>Username used for leaderboard or profile features</li>
-    <li>Game scores, achievements, rankings, and gameplay statistics</li>
-    <li>Basic technical data required for the app to function</li>
-    <li>Crash logs, performance data, and debugging information</li>
-    <li>Limited data related to rewarded ads and ad interactions</li>
-  </ul>
-
-  <h2>2. Data We Do Not Intentionally Collect</h2>
-  <ul>
-    <li>Government identification numbers</li>
-    <li>Phone numbers</li>
-    <li>Home addresses</li>
-    <li>Payment card information</li>
-    <li>Contacts, SMS content, or call logs</li>
-    <li>Microphone, camera, or precise location data</li>
-  </ul>
-
-  <h2>3. How We Use Data</h2>
-  <ul>
-    <li>To provide and improve the gameplay experience</li>
-    <li>To operate scores, achievements, and leaderboard systems</li>
-    <li>To detect bugs and improve performance</li>
-    <li>To manage rewarded advertising features</li>
-    <li>To maintain app security and technical stability</li>
-  </ul>
-
-  <h2>4. Third-Party Services</h2>
-  <p>
-    CarSpy may rely on third-party services for certain features, such as ad delivery, analytics, crash reporting,
-    or cloud-based leaderboard infrastructure. These providers may process limited technical data through their own systems.
-  </p>
-
-  <h2>5. Advertising</h2>
-  <p>
-    The app may include rewarded ads. Advertising providers may process certain device or app-related technical data
-    for ad delivery, performance measurement, and fraud prevention.
-  </p>
-
-  <h2>6. Data Sharing</h2>
-  <p>
-    CarSpy does not sell user data. However, limited data may be shared with third-party providers that support advertising,
-    analytics, crash reporting, or infrastructure necessary to operate the app.
-  </p>
-
-  <h2>7. Data Retention</h2>
-  <p>
-    Data is retained only for as long as reasonably necessary to operate the app, resolve technical issues, and maintain the service.
-  </p>
-
-  <h2>8. Security</h2>
-  <p>
-    Reasonable technical and organizational measures are used to protect data. However, no method of transmission over the Internet
-    or electronic storage is completely secure.
-  </p>
-
-  <h2>9. User Rights</h2>
-  <p>
-    Users may contact us with questions about their data or, where applicable, request deletion of data associated with them.
-  </p>
-
-  <h2>10. Changes to This Policy</h2>
-  <p>
-    This Privacy Policy may be updated from time to time. The latest version will always be available on this page.
-  </p>
-
-  <h2>11. Contact</h2>
-  <p>
-    If you have any questions about this Privacy Policy, you can contact us at:<br />
-    <strong>Email:</strong> metinakanay@gmail.com
-  </p>
-
+    function setLanguage(code){
+      if(!i18n[code]) code='en';
+      const d=i18n[code], meta=languages.find(x=>x[0]===code);
+      document.documentElement.lang=code;document.documentElement.dir=code==='ar'?'rtl':'ltr';document.title=`CarSpy — ${d.title}`;
+      current.textContent=`${meta[1]} ${meta[2]}`;
+      document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=d[el.dataset.i18n]);
+      document.querySelectorAll('[data-i18n-html]').forEach(el=>el.innerHTML=d[el.dataset.i18nHtml]);
+      document.getElementById('policy').innerHTML=d.sections.map((s,i)=>`<section class="section"><h2><span>${String(i+1).padStart(2,'0')}</span>${s[0]}</h2>${s[1]}</section>`).join('');
+      menu.querySelectorAll('button').forEach(x=>x.classList.toggle('active',x.dataset.lang===code));menu.classList.remove('open');btn.setAttribute('aria-expanded','false');localStorage.setItem('carspyPrivacyLanguage',code);
+    }
+    const saved=localStorage.getItem('carspyPrivacyLanguage');const browser=navigator.language||'en';const detected=languages.some(x=>x[0]===browser)?browser:(languages.some(x=>x[0]===browser.split('-')[0])?browser.split('-')[0]:'en');setLanguage(saved||detected);
+  </script>
 </body>
 </html>
