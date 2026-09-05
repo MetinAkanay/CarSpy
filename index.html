@@ -1,193 +1,96 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CarSpy</title>
-
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #0f172a, #020617);
-  color: #e2e8f0;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-h1 {
-  color: #38bdf8;
-  text-align: center;
-}
-
-h2 {
-  color: #60a5fa;
-  margin-top: 30px;
-}
-
-p {
-  line-height: 1.7;
-}
-
-.highlight {
-  color: #facc15;
-}
-
-.footer {
-  margin-top: 40px;
-  font-size: 14px;
-  opacity: 0.7;
-  text-align: center;
-}
-
-.divider {
-  margin: 60px 0;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-</style>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#070916">
+  <meta name="description" content="CarSpy — Catch the detail. Beat the pack.">
+  <title>CarSpy — Car Recognition Game</title>
+  <style>
+    :root{--bg:#070916;--panel:#111426;--panel2:#181b31;--line:#2a2f4c;--text:#f7f8ff;--muted:#aab1ca;--purple:#8b5cf6;--cyan:#22d3ee;--orange:#f59e0b;--pink:#ec4899;--shadow:0 25px 90px rgba(0,0,0,.48)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 0,rgba(139,92,246,.24),transparent 34%),radial-gradient(circle at 90% 16%,rgba(34,211,238,.15),transparent 30%),var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(rgba(255,255,255,.026) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.026) 1px,transparent 1px);background-size:36px 36px;mask-image:linear-gradient(#000,transparent 84%)}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+    header{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(7,9,22,.76);backdrop-filter:blur(18px)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:950;font-size:20px;letter-spacing:.2px}.logo{position:relative;width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,var(--purple),#4338ca 50%,var(--cyan));box-shadow:0 0 28px rgba(139,92,246,.36);font-size:12px;font-style:italic}.logo:after{content:"";position:absolute;inset:5px;border:1px solid rgba(255,255,255,.38);border-radius:10px}.navlinks{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:14px;font-weight:750}.navlinks a:hover{color:#fff}.languages{display:flex;padding:4px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}.languages button{border:0;border-radius:8px;background:transparent;color:var(--muted);font:inherit;font-weight:850;padding:7px 10px;cursor:pointer}.languages button.active{background:linear-gradient(135deg,var(--orange),#ea580c);color:#120d05;box-shadow:0 4px 18px rgba(245,158,11,.24)}
+    .hero{min-height:700px;display:grid;grid-template-columns:1.06fr .94fr;align-items:center;gap:60px;padding:80px 0 70px}.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(34,211,238,.28);border-radius:999px;background:rgba(34,211,238,.07);color:#8beaf7;font-size:12px;font-weight:900;letter-spacing:1.25px;text-transform:uppercase}.badge i{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+    h1{margin:18px 0 19px;font-size:clamp(52px,8vw,88px);line-height:.94;letter-spacing:-4px}.gradient{display:block;background:linear-gradient(90deg,#fff 5%,#c4b5fd 48%,#67e8f9 85%);-webkit-background-clip:text;color:transparent}.tagline{font-size:clamp(21px,3vw,29px);font-weight:900;margin:0 0 15px}.lead{max-width:620px;color:#c5cbe0;font-size:18px;margin:0}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 18px;border-radius:13px;border:1px solid var(--line);background:var(--panel);font-weight:850;transition:.2s}.button.primary{color:#100b03;border:0;background:linear-gradient(135deg,#fbbf24,var(--orange),#f97316);box-shadow:0 15px 34px rgba(245,158,11,.22)}.button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .visual{position:relative;min-height:500px;display:grid;place-items:center}.glow{position:absolute;width:370px;height:370px;border-radius:50%;background:conic-gradient(from 20deg,var(--purple),var(--cyan),var(--orange),var(--purple));filter:blur(65px);opacity:.18;animation:pulse 5s ease-in-out infinite}.phone{position:relative;width:292px;padding:13px;border:1px solid #3a4062;border-radius:40px;background:#090b14;box-shadow:0 36px 100px rgba(0,0,0,.62),0 0 0 7px rgba(255,255,255,.025);transform:rotate(3deg)}.screen{min-height:546px;padding:25px 18px;border-radius:29px;background:radial-gradient(circle at 50% 22%,rgba(139,92,246,.35),transparent 33%),linear-gradient(180deg,#14172c,#090b16);overflow:hidden}.notch{width:91px;height:21px;border-radius:999px;background:#02030a;margin:-17px auto 24px}.mini-brand{text-align:center;font-weight:950;font-size:21px}.arena{margin:35px 0 17px;padding:18px;border:1px solid rgba(139,92,246,.42);border-radius:19px;background:linear-gradient(135deg,rgba(139,92,246,.18),rgba(34,211,238,.08));text-align:center}.arena strong{display:block;font-size:20px}.car{font-size:76px;filter:drop-shadow(0 0 22px rgba(34,211,238,.5));margin:16px 0}.answer{height:43px;margin-top:9px;border:1px solid var(--line);border-radius:12px;background:#171a2e;display:flex;align-items:center;padding:0 13px;color:#c7cce0;font-size:13px}.answer.hot{border-color:var(--orange);color:#ffd375;background:rgba(245,158,11,.08)}
+    .float{position:absolute;padding:12px 15px;border:1px solid var(--line);border-radius:15px;background:rgba(17,20,38,.88);backdrop-filter:blur(12px);box-shadow:var(--shadow);font-size:13px;font-weight:850}.float.one{left:-18px;top:105px}.float.two{right:-16px;bottom:115px}.float span{color:var(--orange)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-bottom:88px}.stat{padding:23px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,var(--panel2),rgba(13,16,33,.95));text-align:center}.stat b{display:block;font-size:29px;background:linear-gradient(90deg,#fff,#67e8f9);-webkit-background-clip:text;color:transparent}.stat span{color:var(--muted);font-size:13px;font-weight:700}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 35px}.kicker{color:var(--orange);font-size:12px;font-weight:950;letter-spacing:1.7px;text-transform:uppercase}.section-head h2{font-size:clamp(32px,5vw,48px);line-height:1.08;margin:8px 0 12px;letter-spacing:-1.8px}.section-head p{color:var(--muted);margin:0;font-size:17px}
+    section.block{padding:40px 0 88px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{position:relative;overflow:hidden;min-height:270px;padding:26px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,var(--panel2),#0d1021);transition:.25s}.card:hover{transform:translateY(-5px);border-color:#444b75}.card:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-65px;top:-65px;background:var(--card-accent,var(--purple));filter:blur(45px);opacity:.2}.icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:color-mix(in srgb,var(--card-accent,var(--purple)) 18%,transparent);border:1px solid color-mix(in srgb,var(--card-accent,var(--purple)) 35%,transparent);font-size:23px}.card h3{font-size:21px;margin:19px 0 8px}.card p{color:var(--muted);margin:0}.blue{--card-accent:var(--cyan)}.orange{--card-accent:var(--orange)}.purple{--card-accent:var(--purple)}
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.feature{display:flex;gap:15px;padding:20px;border:1px solid var(--line);border-radius:17px;background:rgba(17,20,38,.72)}.tick{flex:0 0 35px;height:35px;display:grid;place-items:center;border-radius:11px;background:rgba(34,211,238,.1);color:var(--cyan);font-weight:950}.feature b{display:block;margin-bottom:3px}.feature small{color:var(--muted);font-size:14px}
+    .creator{display:grid;grid-template-columns:180px 1fr;gap:30px;align-items:center;padding:34px;border:1px solid var(--line);border-radius:25px;background:linear-gradient(135deg,rgba(139,92,246,.13),rgba(17,20,38,.92),rgba(34,211,238,.06))}.avatar{width:150px;aspect-ratio:1;display:grid;place-items:center;border:1px solid #454b76;border-radius:34px;background:linear-gradient(145deg,#202441,#0d1020);font-size:44px;font-weight:950;color:#c4b5fd;box-shadow:inset 0 0 45px rgba(139,92,246,.13)}.creator h2{margin:0 0 8px;font-size:31px}.creator p{color:var(--muted);margin:7px 0}.mail{display:inline-flex;margin-top:9px;color:#67e8f9;font-weight:850}
+    footer{margin-top:80px;border-top:1px solid rgba(255,255,255,.07);padding:30px 0 40px;color:#858da9}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-links{display:flex;gap:18px}.footer-links a:hover{color:#fff}
+    [data-lang]{display:none}[data-lang].show{display:block}
+    @keyframes pulse{50%{transform:scale(1.12);opacity:.25}}
+    @media(max-width:900px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:64px}.hero-copy{text-align:center}.lead{margin:auto}.actions{justify-content:center}.visual{min-height:570px}.stats{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.creator{grid-template-columns:1fr;text-align:center}.avatar{margin:auto}.mail{justify-content:center}.features{grid-template-columns:1fr}}
+    @media(max-width:560px){.wrap{width:min(100% - 24px,1120px)}nav{height:64px}.brand{font-size:18px}.logo{width:38px;height:38px}.languages button{padding:6px 8px}.hero{padding:52px 0 34px;gap:25px}h1{letter-spacing:-2.6px}.visual{min-height:520px;transform:scale(.9);margin:-20px 0}.float.one{left:-8px}.float.two{right:-8px}.stats{margin-bottom:60px}.stat{padding:17px 10px}.stat b{font-size:24px}.creator{padding:25px 20px}.footer-row{flex-direction:column;text-align:center}}
+  </style>
 </head>
-
 <body>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#top"><span class="logo">CS</span>CarSpy</a>
+      <div class="navlinks">
+        <a href="#modes" data-t="navModes"></a><a href="#features" data-t="navFeatures"></a><a href="#developer" data-t="navDeveloper"></a>
+      </div>
+      <div class="languages" aria-label="Language">
+        <button type="button" data-set-lang="tr">🇹🇷 TR</button><button type="button" data-set-lang="en">🇬🇧 EN</button>
+      </div>
+    </nav>
+  </header>
 
-<div class="container">
+  <main id="top">
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <div class="badge"><i></i><span data-t="badge"></span></div>
+        <h1><span class="gradient">CarSpy</span></h1>
+        <p class="tagline" data-t="tagline"></p>
+        <p class="lead" data-t="lead"></p>
+        <div class="actions"><a class="button primary" href="#modes"><span data-t="discover"></span> ↓</a><a class="button" href="mailto:metinakanay@gmail.com"><span data-t="contact"></span> ↗</a></div>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <div class="glow"></div>
+        <div class="phone"><div class="screen"><div class="notch"></div><div class="mini-brand">CARSPY</div><div class="arena"><small>ARENA</small><strong data-t="challenge"></strong><div class="car">🏎️</div></div><div class="answer hot">A · Nissan GT-R</div><div class="answer">B · Toyota Supra</div><div class="answer">C · Porsche 911</div></div></div>
+        <div class="float one">🔥 <span>12x</span> STREAK</div><div class="float two">🏆 <span data-t="rank"></span></div>
+      </div>
+    </div>
 
-<!-- TÜRKÇE -->
+    <div class="wrap stats">
+      <div class="stat"><b>300+</b><span data-t="cars"></span></div><div class="stat"><b>1.000+</b><span data-t="questions"></span></div><div class="stat"><b>20</b><span data-t="ranks"></span></div><div class="stat"><b>3</b><span data-t="experiences"></span></div>
+    </div>
 
-<h1>CarSpy</h1>
+    <section id="modes" class="block wrap">
+      <div class="section-head"><div class="kicker" data-t="modesKicker"></div><h2 data-t="modesTitle"></h2><p data-t="modesText"></p></div>
+      <div class="cards">
+        <article class="card blue"><div class="icon">🧠</div><h3 data-t="relaxTitle"></h3><p data-t="relaxText"></p></article>
+        <article class="card orange"><div class="icon">⏱️</div><h3 data-t="challengeTitle"></h3><p data-t="challengeText"></p></article>
+        <article class="card purple"><div class="icon">⚔️</div><h3 data-t="arenaTitle"></h3><p data-t="arenaText"></p></article>
+      </div>
+    </section>
 
-<p style="text-align:center;">
-<strong>Detayı yakala, rakipleri geç.</strong>
-</p>
+    <section id="features" class="block wrap">
+      <div class="section-head"><div class="kicker" data-t="featuresKicker"></div><h2 data-t="featuresTitle"></h2><p data-t="featuresText"></p></div>
+      <div class="features" id="featureList"></div>
+    </section>
 
-<h2>CarSpy Nedir?</h2>
-<p>
-CarSpy, araçları detaylarından tanımanı sağlayan hızlı, rekabetçi ve refleks odaklı bir mobil bilgi oyunudur.
-Oyuncular ekranda gördükleri araç görsellerine bakarak doğru modeli kısa sürede tahmin etmeye çalışır.
-</p>
+    <section id="developer" class="block wrap">
+      <div class="creator"><div class="avatar">MAK</div><div><div class="kicker" data-t="independent"></div><h2>Metin Akanay Kırdar</h2><p data-t="developerText"></p><p data-t="developmentText"></p><a class="mail" href="mailto:metinakanay@gmail.com">✉&nbsp; metinakanay@gmail.com</a></div></div>
+    </section>
+  </main>
 
-<p>
-Her doğru cevap seni bir adım ileri taşırken, oluşturduğun <span class="highlight">streak</span> sistemi ile oyunun temposu artar.
-Hızlı düşün, doğru seç ve zirveye çık.
-</p>
+  <footer><div class="wrap footer-row"><span>© 2026 CarSpy</span><div class="footer-links"><a href="privacy.html" data-t="privacy"></a><a href="mailto:metinakanay@gmail.com" data-t="contact"></a></div></div></footer>
 
-<h2>Oyun Deneyimi</h2>
-<p>
-CarSpy, farklı oyuncu tarzlarına hitap eden iki ana oyun modu sunar:
-</p>
-
-<p>
-<strong>⏱ Süreli Mod:</strong> Zamana karşı yarış. Yanlış bir seçim oyunu bitirebilir… ya da ikinci şansını kullanarak devam edebilirsin.
-</p>
-
-<p>
-<strong>🧠 Sınırsız Mod:</strong> Süre baskısı olmadan rahatça oyna. Öğren, geliş ve araç bilgini artır.
-</p>
-
-<h2>Öne Çıkan Özellikler</h2>
-<p>
-• Yüzlerce farklı araç modeli<br>
-• Sürekli güncellenen içerik<br>
-• Global liderlik tablosu<br>
-• Rütbe ve ilerleme sistemi<br>
-• Streak ve ikinci şans mekanikleri<br>
-</p>
-
-<h2>Geliştirme Süreci</h2>
-<p>
-CarSpy, <span class="highlight">2026 yılında</span> bağımsız geliştirici 
-<span class="highlight">Metin Akanay Kırdar</span> tarafından geliştirilmiştir.
-</p>
-
-<p>
-Uygulama, kullanıcı deneyimini sürekli iyileştirmek ve yeni içerikler eklemek için aktif olarak geliştirilmeye devam etmektedir.
-</p>
-
-<h2>İletişim</h2>
-<p>
-Sorularınız veya geri bildirimleriniz için:
-</p>
-
-<p>
-📧 <strong>metinakanay@gmail.com</strong>
-</p>
-
-<div class="footer">
-© 2026 CarSpy
-</div>
-
-<div class="divider"></div>
-
-<!-- ENGLISH -->
-
-<h1>About CarSpy</h1>
-
-<p style="text-align:center;">
-<strong>Catch the detail. Beat the pack.</strong>
-</p>
-
-<h2>What is CarSpy?</h2>
-<p>
-CarSpy is a fast-paced, competitive, and reflex-based mobile trivia game where players identify cars from visual details.
-Players are presented with a vehicle and must quickly choose the correct model from multiple options.
-</p>
-
-<p>
-Each correct answer builds your <span class="highlight">streak</span>, increasing the intensity and rewarding fast and accurate decisions.
-</p>
-
-<h2>Gameplay Experience</h2>
-<p>
-CarSpy offers two main game modes designed for different play styles:
-</p>
-
-<p>
-<strong>⏱ Timed Mode:</strong> Race against the clock. One wrong answer can end your run… unless you use a second chance.
-</p>
-
-<p>
-<strong>🧠 Relax Mode:</strong> No pressure, no timer. Play at your own pace and improve your car knowledge.
-</p>
-
-<h2>Key Features</h2>
-<p>
-• Hundreds of car models<br>
-• Constantly updated content<br>
-• Global leaderboard<br>
-• Rank progression system<br>
-• Streak and second chance mechanics<br>
-</p>
-
-<h2>Development</h2>
-<p>
-CarSpy was developed in <span class="highlight">2026</span> by independent developer 
-<span class="highlight">Metin Akanay Kırdar</span>, with the goal of creating a fun and competitive experience for car enthusiasts.
-</p>
-
-<p>
-The app is actively being improved with new features and content updates.
-</p>
-
-<h2>Contact</h2>
-<p>
-For questions or feedback:
-</p>
-
-<p>
-📧 <strong>metinakanay@gmail.com</strong>
-</p>
-
-<div class="footer">
-© 2026 CarSpy
-</div>
-
-</div>
-
+  <script>
+    const copy={
+      tr:{navModes:'Oyun Modları',navFeatures:'Özellikler',navDeveloper:'Geliştirici',badge:'Yeni nesil araç bilgi oyunu',tagline:'Detayı yakala, rakipleri geç.',lead:'Yüzlerce otomobili detaylarından tanı, bilgini sınırla, streak oluştur ve Arena’da gerçek oyunculara karşı zirveye tırman.',discover:'CarSpy’ı keşfet',contact:'İletişim',challenge:'Hangi otomobil?',rank:'Efsane yolunda',cars:'otomobil modeli',questions:'özgün soru',ranks:'rütbe',experiences:'farklı oyun deneyimi',modesKicker:'Sürüş tarzını seç',modesTitle:'Her oyuncuya uygun bir mücadele',modesText:'Rahatça öğren, zamana karşı yarış veya Arena’da rakiplerine meydan oku.',relaxTitle:'Sınırsız Mod',relaxText:'Sayaç baskısı olmadan kendi hızında oyna. Araçları öğren, koleksiyonunu geliştir ve bilgini güçlendir.',challengeTitle:'Süreli Mod',challengeText:'Her saniyenin önemli olduğu yüksek tempolu mücadele. Streak yap, ikinci şansını akıllıca kullan ve rekor kır.',arenaTitle:'Çok Oyunculu Arena',arenaText:'Hız ve isabet odaklı karşılaşmalarda gerçek oyuncularla yarış. Arena rütbeni yükselt ve liderliğini kanıtla.',featuresKicker:'Garajın hiç durmaz',featuresTitle:'Bilgi, rekabet ve ilerleme bir arada',featuresText:'Her oturumda öğrenmeni, gelişmeni ve yeniden yarışmak istemeni sağlayan sistemler.',features:[['Global Liderlik','Dünyanın dört bir yanındaki oyuncularla haftalık sıralamalarda yarış.'],['Rütbe Yolculuğu','Rookie’den Legend’a uzanan 20 aşamalı ilerleme sisteminde yüksel.'],['Başarımlar','Streak, araç bilgisi ve oyun performansınla yeni başarımlar aç.'],['Sürekli Yeni İçerik','Yeni araç modelleri, sorular, etkinlikler ve iyileştirmelerle oyun büyümeye devam eder.'],['Streak & İkinci Şans','Arka arkaya doğru cevaplarla ritmi yükselt; kritik anlarda yarışa geri dön.'],['Çok Dilli Deneyim','CarSpy farklı ülkelerden otomobil tutkunlarını destekleyen geniş dil seçenekleri sunar.']],independent:'Bağımsız geliştirici',developerText:'CarSpy, otomobil tutkusunu rekabetçi ve erişilebilir bir bilgi oyunu deneyimine dönüştürmek amacıyla 2026 yılında bağımsız geliştirici Metin Akanay Kırdar tarafından geliştirildi.',developmentText:'Oyun; yeni otomobiller, sorular, modlar ve topluluk odaklı özelliklerle aktif olarak geliştirilmeye devam ediyor.',privacy:'Gizlilik Politikası'},
+      en:{navModes:'Game Modes',navFeatures:'Features',navDeveloper:'Developer',badge:'The next-generation car trivia game',tagline:'Catch the detail. Beat the pack.',lead:'Recognize hundreds of cars from visual details, test your knowledge, build your streak, and climb to the top against real players in the Arena.',discover:'Discover CarSpy',contact:'Contact',challenge:'Which car is it?',rank:'Road to Legend',cars:'car models',questions:'original questions',ranks:'ranks',experiences:'distinct game experiences',modesKicker:'Choose your drive',modesTitle:'A challenge for every player',modesText:'Learn at your own pace, race against the clock, or challenge rivals in the Arena.',relaxTitle:'Relax Mode',relaxText:'Play at your own pace with no timer pressure. Learn new cars, grow your collection, and sharpen your knowledge.',challengeTitle:'Challenge Mode',challengeText:'A fast-paced run where every second matters. Build your streak, use second chances wisely, and break your record.',arenaTitle:'Multiplayer Arena',arenaText:'Compete with real players in speed and accuracy battles. Raise your Arena rank and prove your place at the top.',featuresKicker:'Your garage keeps growing',featuresTitle:'Knowledge, competition, and progression',featuresText:'Systems designed to help you learn, improve, and come back for one more race.',features:[['Global Leaderboard','Compete with players around the world in weekly rankings.'],['Rank Journey','Climb a 20-step progression path from Rookie to Legend.'],['Achievements','Unlock achievements through streaks, car knowledge, and gameplay performance.'],['Fresh Content','The game keeps growing with new car models, questions, events, and improvements.'],['Streak & Second Chances','Build momentum with consecutive answers and return to the race at critical moments.'],['Multilingual Experience','CarSpy welcomes car enthusiasts around the world with broad language support.']],independent:'Independent developer',developerText:'CarSpy was created in 2026 by independent developer Metin Akanay Kırdar to turn a passion for cars into an accessible, competitive trivia experience.',developmentText:'The game remains in active development with new cars, questions, modes, and community-focused features.',privacy:'Privacy Policy'}
+    };
+    function setLanguage(lang){const d=copy[lang]||copy.en;document.documentElement.lang=lang;document.querySelectorAll('[data-t]').forEach(el=>el.textContent=d[el.dataset.t]);document.getElementById('featureList').innerHTML=d.features.map(([title,text])=>`<article class="feature"><div class="tick">✓</div><div><b>${title}</b><small>${text}</small></div></article>`).join('');document.querySelectorAll('[data-set-lang]').forEach(b=>b.classList.toggle('active',b.dataset.setLang===lang));localStorage.setItem('carspyAboutLanguage',lang)}
+    document.querySelectorAll('[data-set-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.setLang)));
+    setLanguage(localStorage.getItem('carspyAboutLanguage')||((navigator.language||'').toLowerCase().startsWith('tr')?'tr':'en'));
+  </script>
 </body>
 </html>
